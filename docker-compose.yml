@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  app:
+    container_name: nextjs-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: "mysql://admin:schloarlylabdb2024@213.210.20.107:3306/digitalcareerguidelylabdb"
+      HOST: 0.0.0.0
+      PORT: 3000
